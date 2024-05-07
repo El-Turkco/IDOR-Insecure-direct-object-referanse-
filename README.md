@@ -7,3 +7,8 @@ Insecure Direct Object References (IDOR) zafiyeti bir saldırganın hedef web uy
 Örneğin bir kullanıcının paylaştı bir resmi veya bir post'tu onun yetkisi olmadan. Silebilirseniz bu bir Insucere direct object referanse kısaca IDOR güvenlik açığı sömürmüş olacaksınız.
 
 Kendi yaptığım projede ise bu güvenilk açğını barındıran bir web uygulaması tasarladım.
+
+
+Application architecture
+
+https://github.com/El-Turkco/IDOR-Insecure-direct-object-referanse-/assets/103064152/2eb0700a-3202-4c96-be52-8b0070d91a40
