@@ -12,3 +12,11 @@ Kendi yaptığım projede ise bu güvenilk açğını barındıran bir web uygul
 Application architecture
 
 https://github.com/El-Turkco/IDOR-Insecure-direct-object-referanse-/assets/103064152/2eb0700a-3202-4c96-be52-8b0070d91a40
+
+
+
+Steps to produce IDOR
+1- İki tane farklı hesap açın.(1-Account:hacker,2-Account:TestUser)
+2- Test hesabından bir message paylaşın ve messageID'ni alın 
+3- Hacker hesabından mesaj silme işlemi gidin ve test hesabın messageID'ni verin ve isteği gönderin.
+
