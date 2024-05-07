@@ -2,11 +2,11 @@
 IDOR vulnerability simulation with nodeJs 
 
 
-Insecure Direct Object References (IDOR) zafiyeti bir saldırganın hedef web uygulamasında yetkisiz erişim elde etmesine ve eylemler gerçekleştirmesine olanak tanıyan bir web uygulama zafiyetidir.
+Insecure Direct Object References (IDOR) vulnerability is a web application vulnerability that allows an attacker to gain unauthorized access and perform actions on a target web application.
 
-Örneğin bir kullanıcının paylaştı bir resmi veya bir post'tu onun yetkisi olmadan. Silebilirseniz bu bir Insucere direct object referanse kısaca IDOR güvenlik açığı sömürmüş olacaksınız.
+For example, a user shared an image or a post without his or her authorization. If you can delete it, this is an Insucere direct object reference, in short, you will be exploiting the IDOR vulnerability.
 
-Kendi yaptığım projede ise bu güvenilk açğını barındıran bir web uygulaması tasarladım.
+In my own project, I designed a web application that contains this vulnerability.
 
 
 Application architecture
@@ -16,11 +16,11 @@ https://github.com/El-Turkco/IDOR-Insecure-direct-object-referanse-/assets/10306
 
 
 Steps to produce IDOR
-1- İki tane farklı hesap açın.(1-Account:hacker,2-Account:TestUser)
-2- Test hesabından bir message paylaşın ve messageID'ni alın 
-3- Hacker hesabından mesaj silme işlemi gidin ve test hesabın messageID'ni verin ve isteği gönderin.
+1- Open two different accounts (1-Account:hacker, 2-Account:TestUser)
+2- Share a message from the test account and get the message ID 
+3- Go to delete messages from the hacker account and provide the messageID of the test account and send the request.
 
 
-Bu güvenlik açını kapatmak için: Silme işlemdeki messageID ile giriş yapmış olan kullanıcının userID kontrol edilmelidir. 
+This is to turn off the security patch: The userID of the user logged in with messageID should be checked in the deletion process. 
 
-Bu yamayı src/Controller/MsjController.js "delete_message" functionun 76 satırında paylaştım. Dilerseniz oraya göz atabilirsiniz. 
+I shared this patch in line 76 of the “delete_message” function in src/Controller/MsjController.js. You can take a look there if you wish. 
