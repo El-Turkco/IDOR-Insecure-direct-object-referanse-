@@ -20,3 +20,7 @@ Steps to produce IDOR
 2- Test hesabından bir message paylaşın ve messageID'ni alın 
 3- Hacker hesabından mesaj silme işlemi gidin ve test hesabın messageID'ni verin ve isteği gönderin.
 
+
+Bu güvenlik açını kapatmak için: Silme işlemdeki messageID ile giriş yapmış olan kullanıcının userID kontrol edilmelidir. 
+
+Bu yamayı src/Controller/MsjController.js "delete_message" functionun 76 satırında paylaştım. Dilerseniz oraya göz atabilirsiniz. 
