@@ -73,6 +73,7 @@ try{
 // convert object id to string
   const msjUserID= await messageuser.user.toString();
 
+  //**SECURİTY PATCH***//
   //***//İmportant note
   //Comparing the user ID of the message in the request with the logged in user ID.In this way, closing the IDOR vulnerability
   //* if(JwtToken._id !== msjUserID){  
